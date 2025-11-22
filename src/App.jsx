@@ -1,13 +1,13 @@
 import { useState } from 'react'
 import './App.css'
-import Nav from "./navBar"
-import Hero from "./Hero"
-import History from "./history"
-import People from "./people"
-import FamousFor from "./FamousFor"
-import Education from "./Education"
-import Community from './Comunity'
-import Footer from './Footer'
+import Nav from "./navBar.jsx"
+import Hero from "./Hero.jsx"
+import History from "./History.jsx"
+import People from "./People.jsx"
+import FamousFor from "./FamousFor.jsx"
+import Education from "./Education.jsx"
+import Community from './Comunity.jsx'
+import Footer from './Footer.jsx'
 import { useSEO } from './hooks/useSEO';
 import HeroIm from "./assets/hero.png";
 function App() {
