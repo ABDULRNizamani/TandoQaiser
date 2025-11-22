@@ -1,12 +1,12 @@
 import { useState } from 'react'
 import './App.css'
-import Nav from "./navBar.jsx"
+import Navbar from "./Navbar.jsx"
 import Hero from "./Hero.jsx"
 import History from "./History.jsx"
 import People from "./People.jsx"
 import FamousFor from "./FamousFor.jsx"
 import Education from "./Education.jsx"
-import Community from './Comunity.jsx'
+import Community from './Community.jsx'
 import Footer from './Footer.jsx'
 import { useSEO } from './hooks/useSEO';
 import HeroIm from "./assets/hero.png";
@@ -22,7 +22,7 @@ function App() {
    
     
     <div className='app'>
-       <Nav />
+       <Navbar />
        <Hero />
        <History />
        <People />

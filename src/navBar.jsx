@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './navBar.css';
+import './Navbar.css';
 import { Home, BookOpen, Users, Award,  Building2, MessagesSquare } from 'lucide-react';
 
 
