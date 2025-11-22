@@ -1,0 +1,708 @@
+/* Education.css - Edge to Edge */
+
+.education {
+  width: 100vw;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f0fdf4 0%, #ffffff 50%, #dbeafe 100%);
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw !important;
+  margin-right: -50vw !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  padding: 0 !important;
+  overflow: hidden;
+}
+
+.education-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 6rem 2rem;
+}
+
+/* Block Headers */
+.block-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.education-block {
+  margin-bottom: 6rem;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s ease;
+}
+
+.education-block.visible,
+.healthcare-block.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section-icon {
+  width: 60px;
+  height: 60px;
+  color: #10b981;
+  margin: 0 auto 1.5rem;
+  stroke-width: 2;
+}
+
+.healthcare-icon {
+  color: #3b82f6;
+}
+
+.section-title {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  font-size: 1.4rem;
+  color: #10b981;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.healthcare-block .section-subtitle {
+  color: #3b82f6;
+}
+
+/* Hero Card */
+.hero-card {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  padding: 3rem;
+  border-radius: 24px;
+  color: white;
+  text-align: center;
+  margin-bottom: 3rem;
+  box-shadow: 0 15px 50px rgba(16, 185, 129, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-icon {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 1.5rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.hero-title {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.hero-text {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  opacity: 0.95;
+}
+
+.hero-text strong {
+  color: #fbbf24;
+  font-weight: 800;
+}
+
+/* Schools Grid */
+.schools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.school-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+  border-left: 5px solid #10b981;
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateX(-20px);
+}
+
+.school-card.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.school-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(16, 185, 129, 0.2);
+}
+
+.school-icon {
+  width: 36px;
+  height: 36px;
+  color: #10b981;
+  margin-bottom: 1rem;
+  stroke-width: 2;
+}
+
+.school-name {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.school-type {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  background: #d1fae5;
+  color: #059669;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Community Support */
+.community-support {
+  background: white;
+  padding: 3rem;
+  border-radius: 24px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+.support-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.support-icon {
+  width: 40px;
+  height: 40px;
+  color: #ef4444;
+  stroke-width: 2;
+}
+
+.support-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1e293b;
+}
+
+.support-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 3rem;
+  align-items: start;
+  margin-bottom: 2rem;
+}
+
+.support-highlight {
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+  padding: 2.5rem;
+  border-radius: 20px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 10px 30px rgba(251, 191, 36, 0.3);
+}
+
+.highlight-number {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: 0.5rem;
+}
+
+.highlight-label {
+  font-size: 1.05rem;
+  font-weight: 600;
+  opacity: 0.95;
+}
+
+.support-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.support-item {
+  display: flex;
+  align-items: start;
+  gap: 1rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #475569;
+}
+
+.bullet {
+  color: #10b981;
+  font-weight: 900;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+.support-item strong {
+  color: #059669;
+  font-weight: 700;
+}
+
+/* Belief Quote */
+.belief-quote {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  padding: 2.5rem;
+  border-radius: 20px;
+  text-align: center;
+  position: relative;
+  color: white;
+}
+
+.quote-icon {
+  font-size: 5rem;
+  font-weight: 900;
+  opacity: 0.2;
+  position: absolute;
+  top: 1rem;
+  left: 2rem;
+  line-height: 1;
+}
+
+.quote-text {
+  font-size: 1.8rem;
+  font-weight: 700;
+  font-style: italic;
+  position: relative;
+  z-index: 1;
+  margin: 0;
+}
+
+.real-investment {
+  color: #fbbf24;
+  font-weight: 900;
+  font-size: 2rem;
+}
+
+/* Healthcare Section */
+.healthcare-block {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s ease 0.3s;
+}
+
+.healthcare-card {
+  background: white;
+  padding: 3rem;
+  border-radius: 24px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  border-top: 5px solid #3b82f6;
+}
+
+.healthcare-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  color: white;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+}
+
+.badge-icon {
+  width: 28px;
+  height: 28px;
+  stroke-width: 2;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.service-item {
+  display: flex;
+  align-items: start;
+  gap: 1.25rem;
+  padding: 1.5rem;
+  background: #f1f5f9;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+.service-item:hover {
+  background: #dbeafe;
+  transform: translateY(-5px);
+}
+
+.service-icon {
+  width: 36px;
+  height: 36px;
+  color: #3b82f6;
+  stroke-width: 2;
+  flex-shrink: 0;
+}
+
+.service-item h4 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 0.25rem;
+}
+
+.service-item p {
+  font-size: 0.95rem;
+  color: #64748b;
+}
+
+.appreciation-box {
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+  padding: 2rem;
+  border-radius: 16px;
+  border-left: 4px solid #3b82f6;
+}
+
+.appreciation-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #475569;
+  display: flex;
+  align-items: start;
+  gap: 1rem;
+  margin: 0;
+}
+
+.inline-heart {
+  width: 24px;
+  height: 24px;
+  color: #ef4444;
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+}
+
+.appreciation-text strong {
+  color: #1e40af;
+  font-weight: 700;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .education-container {
+    padding: 5rem 2rem;
+  }
+
+  .section-title {
+    font-size: 3rem;
+  }
+
+  .support-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+/* Mobile Responsive - Flexible & Natural Layout */
+@media (max-width: 768px) {
+  .education-container {
+    padding: 3rem 1rem;
+  }
+
+  /* Headers - Left aligned on mobile */
+  .block-header {
+    text-align: left;
+    margin-bottom: 2rem;
+  }
+
+  .section-icon {
+    width: 40px;
+    height: 40px;
+    margin: 0 0 1rem 0;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    text-align: left;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+    text-align: left;
+  }
+
+  /* Hero Card - More flexible */
+  .hero-card {
+    padding: 2rem 1.5rem;
+    text-align: left;
+  }
+
+  .hero-icon {
+    width: 36px;
+    height: 36px;
+    margin: 0 0 1rem 0;
+  }
+
+  .hero-title {
+    font-size: 1.4rem;
+    text-align: left;
+  }
+
+  .hero-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    text-align: left;
+  }
+
+  /* Schools - Single column, natural flow */
+  .schools-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .school-card {
+    padding: 1.5rem;
+  }
+
+  .school-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .school-name {
+    font-size: 1rem;
+  }
+
+  .school-type {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.8rem;
+  }
+
+  /* Community Support - Stack naturally */
+  .community-support {
+    padding: 1.5rem;
+  }
+
+  .services-grid {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   gap: 1.5rem;
+   margin-bottom: 2.5rem;
+  }
+  .support-header {
+    justify-content: flex-start;
+    margin-bottom: 1.5rem;
+  }
+
+  .support-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .support-title {
+    font-size: 1.3rem;
+    text-align: left;
+  }
+
+  .support-content {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .support-highlight {
+    padding: 1.5rem;
+    text-align: left;
+  }
+
+  .highlight-number {
+    font-size: 1.8rem;
+  }
+
+  .highlight-label {
+    font-size: 0.9rem;
+  }
+
+  .support-list {
+    gap: 1rem;
+  }
+
+  .support-item {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    text-align: left;
+  }
+
+  .bullet {
+    font-size: 1.1rem;
+  }
+
+  /* Belief Quote - Left aligned */
+  .belief-quote {
+    padding: 1.5rem;
+    text-align: left;
+  }
+
+  .quote-icon {
+    font-size: 3rem;
+    left: 0.5rem;
+    top: 0.5rem;
+  }
+
+  .quote-text {
+    font-size: 1.2rem;
+    text-align: left;
+  }
+
+  .real-investment {
+    font-size: 1.3rem;
+  }
+
+  /* Healthcare - Natural mobile layout */
+  .healthcare-card {
+    padding: 1.5rem;
+  }
+
+  .healthcare-badge {
+    font-size: 0.9rem;
+    padding: 0.7rem 1.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .badge-icon {
+    width: 22px;
+    height: 22px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .service-item {
+    padding: 1.25rem;
+    flex-direction: row;
+    align-items: start;
+    text-align: left;
+  }
+
+  .service-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .service-item h4 {
+    font-size: 0.95rem;
+  }
+
+  .service-item p {
+    font-size: 0.85rem;
+  }
+
+  .appreciation-box {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #475569;
+    display: block;
+    text-align: left;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .appreciation-text {
+    font-size: 0.5rem;
+    line-height: 1.6;
+    flex-direction: row;
+    align-items: start;
+    text-align: left;
+    display: contents;
+  }
+
+  .inline-heart {
+    display: inline;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 1rem;
+    margin-left: 0;
+    padding: 0;
+  }
+
+  .appreciation-text strong {
+    display: inline;
+  }
+}
+
+@media (max-width: 480px) {
+  .education-container {
+    padding: 2.5rem 1rem;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .hero-title {
+    font-size: 1.2rem;
+  }
+
+  .hero-text {
+    font-size: 0.9rem;
+  }
+
+  .school-name {
+    font-size: 0.95rem;
+  }
+
+  .support-title {
+    font-size: 1.15rem;
+  }
+
+  .highlight-number {
+    font-size: 1.6rem;
+  }
+
+  .support-item {
+    font-size: 0.85rem;
+  }
+
+  .quote-text {
+    font-size: 1.05rem;
+  }
+
+  .real-investment {
+    font-size: 1.15rem;
+  }
+
+  .service-item h4 {
+    font-size: 0.9rem;
+  }
+
+  .service-item p {
+    font-size: 0.8rem;
+  }
+
+  .appreciation-text {
+    font-size: 0.85rem;
+  }
+}

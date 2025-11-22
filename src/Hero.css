@@ -1,0 +1,390 @@
+/* Hero.css - Full Width, Absolutely No Gaps */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Performance Optimization */
+.hero,
+.hero-background,
+.hero-overlay,
+.hero-content {
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow-x: hidden;
+}
+
+.hero {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #0f172a;
+  margin: 0 !important;
+  padding: 0 !important;
+  padding-bottom: 0;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw !important;
+  margin-right: -50vw !important;
+  margin-top: 0;
+  margin-bottom: 0;
+  top: 0
+}
+
+/* Background Image */
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Overlays */
+.hero-overlay {
+ position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+  background: linear-gradient(
+    135deg,
+    rgba(15, 23, 42, 0.75) 0%,      /* Dark slate blue */
+    rgba(30, 41, 59, 0.80) 50%,     /* Slightly lighter slate */
+    rgba(15, 23, 42, 0.85) 100%     /* Back to dark */
+  ),
+  rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+}
+
+.hero-gradient-bottom {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 120px;
+  background: linear-gradient(to top, #fefce8 0%, rgba(254, 252, 232, 0.8) 40%, rgba(251, 191, 36, 0.2) 70%, transparent 100%);
+  z-index: 3;
+  margin: 0;
+  padding: 0;
+}
+
+/* Content */
+.hero-content {
+  position: relative;
+  z-index: 4;
+  width: 100%;
+  max-width: 1200px;
+  padding: 6rem 2rem 6rem;
+  text-align: center;
+  color: white;
+  opacity: 0;
+  transform: translate3d(0, 30px, 0);
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-content.visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+/* Title */
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  animation: fadeInUp 0.8s ease 0.2s both;
+  color: white;
+}
+
+.highlight {
+  background: linear-gradient(to right, #fbbf24, #f59e0b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+}
+
+/* Description */
+.hero-description {
+  font-size: 1.4rem;
+  line-height: 1.7;
+  max-width: 700px;
+  margin: 0 auto 3.5rem;
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 400;
+  animation: fadeInUp 0.8s ease 0.4s both;
+}
+
+.hero-description .st1 {
+  font-weight: 700;
+  color: #22c55e; 
+}
+
+.hero-description .st2{
+  font-weight: 700;
+  color: #fbbf24;
+}
+/* Stats Row - Only 3 Icons */
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  animation: fadeInUp 0.8s ease 0.6s both;
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+  transform: translate3d(0, 0, 0);
+}
+
+.stat-item:hover {
+  transform: translate3d(0, -5px, 0);
+}
+
+.stat-icon {
+  color: #fbbf24;
+  width: 40px;
+  height: 40px;
+  stroke-width: 2;
+  transition: transform 0.2s ease, color 0.2s ease;
+  transform: translate3d(0, 0, 0);
+}
+
+.stat-item:hover .stat-icon {
+  transform: translate3d(0, 0, 0) scale(1.15);
+  color: #f59e0b;
+}
+
+.stat-label {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+  letter-spacing: 0.5px;
+}
+
+/* Individual colors for each stat item */
+.stat-item:nth-child(1) .stat-icon {
+ color: #22c55e;   /* Green for Agriculture */
+}
+
+.stat-item:nth-child(1) .stat-label {
+  color: #22c55e;   /* Green text */
+}
+
+.stat-item:nth-child(2) .stat-icon {
+ color: #fbbf24;  /* red for Education */
+}
+
+.stat-item:nth-child(2) .stat-label {
+  color: #fbbf24;  /* red text */
+}
+
+.stat-item:nth-child(3) .stat-icon {
+  color: #3b82f6;  /* Blue for Community */
+}
+
+.stat-item:nth-child(3) .stat-label {
+  color: #3b82f6;  /* Blue text */
+}
+
+/* Hover effects */
+.stat-item:nth-child(1):hover .stat-icon {
+  color: #059669;  /* Darker green on hover */
+}
+
+.stat-item:nth-child(2):hover .stat-icon {
+  color: #f59e0b;  /* Darker golden on hover */
+}
+
+.stat-item:nth-child(3):hover .stat-icon {
+  color: #2563eb;  /* Darker blue on hover */
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .hero-content {
+    padding: 5rem 2rem 7rem;
+  }
+
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .hero {
+    transform: translate3d(0, 0, 0);
+  }
+  
+  .hero-background {
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .hero-description {
+    font-size: 1.25rem;
+  }
+
+  .hero-stats {
+    gap: 3rem;
+  }
+
+  .stat-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .stat-label {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    padding: 4rem 1.5rem 6rem;
+  }
+
+  .hero-title {
+   font-size: 2rem;  /* Adjusted size for mobile */
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+    margin-left: 2rem;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    animation: fadeInUp 0.8s ease 0.2s both;
+    color: white;
+    text-align: center;  /* Ensure it's centered */
+  }
+
+  .highlight {
+   background: linear-gradient(to right, #fbbf24, #f59e0b);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   background-clip: text;
+   display: inline-block;
+  }
+
+  .hero-description {
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+    text-align: center;  /* Center description too */
+  }
+
+  /* Individual colors for each stat item */
+ .stat-item:nth-child(1) .stat-icon {
+   color: #22c55e;   /* Green for Agriculture */
+ }
+ 
+ .stat-item:nth-child(1) .stat-label {
+   color: #22c55e;   /* Green text */
+ }
+ 
+ .stat-item:nth-child(2) .stat-icon {
+   color: #fbbf24;  /* yellow for Education */
+ }
+ 
+ .stat-item:nth-child(2) .stat-label {
+   color: #fbbf24;  /* yellow text */
+ }
+ 
+ .stat-item:nth-child(3) .stat-icon {
+   color: #3b82f6;  /* Blue for Community */
+ }
+ 
+ .stat-item:nth-child(3) .stat-label {
+   color: #3b82f6;  /* Blue text */
+ }
+
+  .hero-stats {
+    gap: 2.5rem;
+  }
+
+  .stat-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .stat-label {
+    font-size: 0.95rem;
+  }
+
+  
+}
+
+@media (max-width: 480px) {
+  .hero-content {
+    padding: 3.5rem 1.25rem 5rem;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .hero-stats {
+    gap: 2rem;
+  }
+
+  .stat-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .stat-label {
+    font-size: 0.9rem;
+  }
+}
