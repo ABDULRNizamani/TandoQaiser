@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import Nav from "./navBar"
-import Hero from "./hero"
+import Hero from "./Hero"
 import History from "./history"
 import People from "./people"
 import FamousFor from "./FamousFor"

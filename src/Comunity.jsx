@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Heart, Users, Facebook, Video, Camera, Shield, Sparkles, CheckCircle } from 'lucide-react';
 import Amir from './assets/amir.png';
 import Tandoqaiser from "./assets/tandoQaiser-page.png"
-import './Comunity.css';
+import './Community.css';
 
 const Community = () => {
   const [isVisible, setIsVisible] = useState(false);

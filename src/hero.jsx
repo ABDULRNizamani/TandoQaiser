@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Wheat, GraduationCap, Users } from 'lucide-react';
 import HeroIm from "./assets/hero.png"
-import './hero.css';
+import './Hero.css';
 
 const Hero = () => {
 
