@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tandoqaiserr.netlify.app/sitemap.xml
