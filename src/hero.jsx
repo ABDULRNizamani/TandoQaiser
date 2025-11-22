@@ -4,6 +4,7 @@ import HeroIm from "./assets/hero.png"
 import './hero.css';
 
 const Hero = () => {
+
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
