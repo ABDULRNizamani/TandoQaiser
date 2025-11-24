@@ -121,7 +121,7 @@ const People = () => {
         {/* Stats */}
         <div className={`stats-section ${isVisible ? 'visible' : ''}`}>
           <div className="stat-card">
-            <div className="stat-number">8K - 12K</div>
+            <div className="stat-number">25K - 30K</div>
             <div className="stat-label">Population</div>
           </div>
           <div className="stat-card highlight-stat">
